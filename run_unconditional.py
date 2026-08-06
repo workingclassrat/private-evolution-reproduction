@@ -20,7 +20,6 @@ if __name__ == "__main__":
     df[LABEL_ID_COLUMN_NAME] = 0
     metadata = {"label_info": [{"name": "unconditional"}]}
     data = Data(data_frame=df, metadata=metadata)
-    print(f"pe Data ready: {len(data.data_frame)} images, 1 class (unconditional)")
 
     exp_folder = (
         f"{RESULTS_DIR}/unconditional_n{NUM_PRIVATE_IMAGES}"
