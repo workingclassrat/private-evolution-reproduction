@@ -5,7 +5,6 @@ from config import DATA_DIR, NUM_PRIVATE_IMAGES
 import os
 import numpy as np
 from datasets import load_dataset
-import config
 
 SAVE_PATH = f"{DATA_DIR}/cifar10_unconditional_{NUM_PRIVATE_IMAGES}.npz"
 
