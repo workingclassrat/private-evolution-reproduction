@@ -21,9 +21,5 @@ if __name__ == "__main__":
     metadata = {"label_info": [{"name": "unconditional"}]}
     data = Data(data_frame=df, metadata=metadata)
 
-    exp_folder = (
-        f"{RESULTS_DIR}/unconditional_n{NUM_PRIVATE_IMAGES}"
-        f"_iter{NUM_ITERATIONS}_syn{NUM_SYNTHETIC_SAMPLES}"
-        f"_H{HISTOGRAM_THRESHOLD}_sigma{NOISE_MULTIPLIER:.2f}"
-    )
+    exp_folder = config.build_exp_folder("unconditional")
     run_pe_pipeline(data, exp_folder)
